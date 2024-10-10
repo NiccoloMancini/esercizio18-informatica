@@ -8,9 +8,9 @@
 <body>
     <?php
         $film = ["QUARTO POTERE", "CASABLANCA", "TAXI DRIVER", "VIA COL VENTO", "COLAZIONE DA TIFFANY"];
-        $stampa = "<select>";
-        foreach ($film as $film_name) {
-            $stampa .= "<option>$film_name</option>";
+        $stampa = "<select name='filmpreferito'>";
+        for($i=1;$i<=count($film); $i++) {
+            $stampa .= "<option value='f$i'>" . $film[$i-1] . "</option>";
         }
         $stampa .= "</select>";
         echo $stampa;
